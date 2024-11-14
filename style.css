@@ -1,0 +1,164 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Cabecera */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color:white;
+    color:#00796b;
+    height: 100px;
+}
+
+header .logo img {
+    height: 50px;
+    width: 50px;
+}
+
+header nav a {
+    color: #00796b;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Sección Inicio */
+#inicio {
+    background-image: url('fondo\ 1\ \(2\).jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+#inicio h1 {
+    font-size: 5.5em;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+}
+
+/* Sección Comprar Ahora */
+#comprar {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f2f2f2;
+    flex-wrap: wrap; /* Permite que las cajas se acomoden en varias filas si es necesario */
+}
+
+.caja1, .caja2, .caja3 {
+    padding: 20px;
+    text-align: center;
+    width: 30%; /* Establecemos un ancho inicial de 30% para pantallas grandes */
+    margin: 10px; /* Espacio entre las cajas */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.caja1 {
+    background-image: url(imagen\ 6.jpg);
+    background-size: cover;
+    height: 400px; /* Altura específica para que sea más larga */
+}
+
+.caja2 {
+    background-color: rgb(223, 186, 22);
+    height: 400px; /* Altura específica para que sea más larga */
+}
+
+.caja3 {
+    background-image: url(imagen1.jpg);
+    background-size: cover;
+    height: 400px; /* Altura específica para que sea más larga */
+}
+.sub, p, .caja2 a {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.sub {
+    margin-top: 50px;
+}
+
+.caja2 a:hover {
+    background-color: #004d40;
+}
+
+/* Sección Video */
+#video {
+    padding: 20px;
+    text-align: center;
+}
+
+#video video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+/* Sección Galería */
+#galeria {
+    padding: 20px;
+    text-align: center;
+}
+
+#galeria h2 {
+    margin-bottom: 20px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 200px; /* Altura específica para las imágenes */
+    object-fit: cover; /* Asegura que las imágenes no se estiren */
+    border-radius: 8px;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    #comprar {
+        flex-direction: column; /* Las cajas se apilarán en columna */
+        align-items: center; /* Centramos las cajas */
+    }
+
+    .caja1, .caja2, .caja3 {
+        width: 80%; /* Establecemos un ancho mayor en pantallas pequeñas para que no se vean tan estrechas */
+        margin-bottom: 20px; /* Agregamos un poco de espacio entre las cajas */
+    }
+}
+
+@media (max-width: 480px) {
+    .caja1, .caja2, .caja3 {
+        width: 90%; /* Aumentamos el ancho de las cajas en pantallas aún más pequeñas */
+        margin-bottom: 15px; /* Ajustamos el margen para las pantallas muy pequeñas */
+    }
+}
